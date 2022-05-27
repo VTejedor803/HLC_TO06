@@ -1,4 +1,4 @@
-# Tarea Online 06 PMDM
+# Tarea Online 06 HLC
 
 ## Configuración
 
