@@ -9,6 +9,7 @@ Para configurar el entorno se deberán seguir los siguientes pasos. En primer lu
 Descargamos, extraemos y copiamos los ficheros a la carpeta deseada en el servidor web:
 
 > cd /var/www/html
+
 > sudo wget https://github.com/VTejedor803/HLC_TO06/archive/refs/heads/main.zip
 > sudo unzip main.zip
 > sudo rm main.zip
