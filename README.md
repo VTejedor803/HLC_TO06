@@ -8,7 +8,8 @@ Para configurar el entorno se deberán seguir los siguientes pasos. En primer lu
 
 Descargamos, extraemos y copiamos los ficheros a la carpeta deseada en el servidor web:
 
-``` cd /var/www/html
+``` 
+cd /var/www/html
 sudo wget https://github.com/VTejedor803/HLC_TO06/archive/refs/heads/main.zip
 sudo unzip main.zip
 sudo rm main.zip
@@ -18,19 +19,22 @@ sudo chown -R www-data:www-data notas
 
 Crear la base de datos. El fichero migracion.sql está situado en la carpeta data
 
-``` mysql -u root -p < notas/data/migracion.sql
+``` 
+mysql -u root -p < notas/data/migracion.sql
 ```
 
 Crear el usuario alumno y darle permiso para usar la base de datos tutorial_crud:
 
-``` mysql -u root -p;
+``` 
+mysql -u root -p;
 CREATE USER 'alumno'@'localhost' IDENTIFIED BY 'Malaga20*';
 GRANT ALL PRIVILEGES ON tutorial_crud.* TO 'alumno'@'localhost';
 ```
 
 Modificar el fichero config.php con el usuario y password elegidos:
 
-```<?php
+```
+<?php
 return [
   'db' => [
     'host' => 'localhost',
