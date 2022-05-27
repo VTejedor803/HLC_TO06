@@ -28,6 +28,7 @@ if (isset($_POST['submit'])) {
       "nombre"    => $_POST['nombre'],
       "apellido"  => $_POST['apellido'],
       "email"     => $_POST['email'],
+      "telefono"  => $_POST['telefono'],
       "edad"      => $_POST['edad']
     ];
     
@@ -35,6 +36,7 @@ if (isset($_POST['submit'])) {
         nombre = :nombre,
         apellido = :apellido,
         email = :email,
+        telefono = :telefono,
         edad = :edad,
         updated_at = NOW()
         WHERE id = :id";
@@ -124,6 +126,10 @@ if (isset($alumno) && $alumno) {
           <div class="form-group">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" value="<?= escapar($alumno['email']) ?>" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="number" name="telefono" id="telefono" value="<?= escapar($alumno['telefono']) ?>" class="form-control">
           </div>
           <div class="form-group">
             <label for="edad">Edad</label>
